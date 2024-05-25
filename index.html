@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  method="post" id="stdData">
+        <label for="">name</label>
+        <input type="text" id="name"> <br><br>
+
+        <label for="">email</label>
+        <input type="email" id="email"> <br><br>
+
+
+        <label for="">age</label>
+        <input type="number" id="age"> <br><br>
+
+
+        <input type="submit" value="Add Student">
+    </form>
+
+
+    <script>
+        let stdForm  = document.getElementById('stdData');
+      
+        stdForm.onsubmit = (e)=>{
+            e.preventDefault();
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let age = document.getElementById('age').value;
+    
+           
+
+           let data= {
+            "name": name,
+            "email": email,
+            "age":age
+           }
+    
+        console.log(data);
+
+        let json = JSON.stringify(data);
+        fetch("http://localhost:3000/students",{
+         method:"POST",
+         header:{ 'content-type':'application/json'
+
+         },
+         body: json
+
+        })
+    };
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="5" id="abc">
+        <tr>
+            <th>name</th>
+            <th>id</th>
+            <th>age</th>
+            <th>email</th>
+        </tr>
+
+
+    </table>
+
+    <script>
+        async function a() {
+            let response = await fetch("http://localhost:3000/students");
+            let jsonData = await response.json();
+            for (i in jsonData) {
+                document.getElementById("abc").innerHTML += `
+                <tr>
+                <td>${jsonData[i].name}</td>
+                <td>${jsonData[i].id}</td>
+                <td>${jsonData[i].age}</td>
+                <td>${jsonData[i].email}</td>
+            </tr>
+                `
+
+            }
+        };
+        a();
+    </script>
+</body>
+
+</html>
