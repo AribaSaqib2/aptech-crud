@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>fetch</title>
 </head>
 
 <body>
@@ -14,6 +14,7 @@
             <th>id</th>
             <th>age</th>
             <th>email</th>
+            <th colspan="2">action</th>
         </tr>
 
 
@@ -30,12 +31,29 @@
                 <td>${jsonData[i].id}</td>
                 <td>${jsonData[i].age}</td>
                 <td>${jsonData[i].email}</td>
+                <td><button onclick="editStudent(${jsonData[i].id})">edit</button></td>
+                <td><button onclick="del(${jsonData[i].id})">del</button></td>
             </tr>
                 `
 
             }
         };
         a();
+
+        function editStudent(id){
+            localStorage.setItem('id',id)
+            window.location.href='edit.html'
+        }
+
+        function del(id){
+            fetch(`http://localhost:3000/students/${id}`,{
+            method: 'DELETE',
+            headers:{'content-type':'application/json'
+            }
+            }
+            )
+        }
+        windoe.location.reload();
     </script>
 </body>
 
