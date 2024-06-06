@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>edit page</title>
 </head>
 <body>
     <form  method="post" id="stdData">
@@ -20,5 +20,25 @@
 
         <input type="submit" value="Add Student">
     </form>
+    <script>
+        var  form= document.getElementById('stdForm');
+        form.onsubmit = (e) =>{
+           e.preventDefault();
+          
+           let id = localStorage.getItem('id');
+           data = {
+               name : document.getElementById('name').value,
+               email : document.getElementById('email').value,
+               age : document.getElementById('age').value,
+           }
+           fetch(`http://localhost:3000/students/${id}`,{
+               method: 'PUT',
+               headers:{
+                           'Content-Type': 'application/json'
+                       },
+                       body: JSON.stringify(data),
+           })
+       }
+   </script>
 </body>
 </html>
