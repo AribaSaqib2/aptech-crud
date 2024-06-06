@@ -1,58 +1,28 @@
 {
   "students": [
     {
-      "id": "26eb",
-      "name": "ariba",
-      "email": "aptechahmed737@gmail.com",
-      "age": "77"
+      "name": "Ariba",
+      "email": "ariba@gmail.com",
+      "age": "25",
+      "id": "26"
     },
     {
-      "id": "75af",
-      "name": "bina",
+      "name": "bina bano",
       "email": "bina@gmail.com",
-      "age": "25"
+      "age": "12",
+      "id": "738"
     },
     {
-      "id": "c36f",
-      "name": "bina",
-      "email": "bina@gmail.com",
-      "age": "25"
-    },
-    {
-      "id": "9f0e",
-      "name": "bina",
-      "email": "bina@gmail.com",
-      "age": "25"
-    },
-    {
-      "name": "roona",
-      "email": "roona@yahoo.com",
-      "age": "14",
-      "id": "54"
-    },
-    {
-      "id": "5a2b",
-      "name": "bina",
-      "email": "bina@gmail.com",
-      "age": "25"
-    },
-    {
-      "id": "a738",
-      "name": "bina",
-      "email": "bina@gmail.com",
-      "age": "25"
-    },
-    {
-      "id": "67ca",
+      "id": "634",
       "name": "maha",
       "email": "maha@gmail.com",
       "age": "19"
     },
     {
-      "id": 1717648604109,
       "name": "mahawish",
       "email": "mahawish@gmail.com",
-      "age": "22"
+      "age": "29",
+      "id": "1717648604109"
     }
   ]
 }
